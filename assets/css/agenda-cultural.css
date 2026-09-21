@@ -1,0 +1,200 @@
+.agenda-cultural {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+.agenda-cultural-dia {
+    margin: 1em 0 0 !important;
+}
+
+.agenda-cultural-eventos {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.agenda-cultural-evento {
+    display: flex;
+    gap: 1em;
+    padding: 1em;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background: #fff;
+}
+
+.agenda-cultural-imagen {
+    width: 200px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 6px;
+    flex-shrink: 0;
+    border: 1px solid #ccc;
+}
+
+.agenda-cultural-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.agenda-cultural-hora {
+    display: inline-block;
+    font-weight: 700;
+    color: #555;
+}
+
+.agenda-cultural-titulo {
+    margin: 0.1em 0 0.3em;
+    font-size: 1.1em;
+    font-weight: 700;
+}
+
+.agenda-cultural-categoria {
+    display: inline-block;
+    font-size: 0.8em;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: #6a1b9a;
+    background: #f3e5f5;
+    border-radius: 4px;
+    padding: 0.15em 0.6em;
+    margin-bottom: 0.4em;
+}
+
+.agenda-cultural-lugar {
+    margin: 0.3em 0;
+    color: #444;
+}
+
+.agenda-cultural-lugar a {
+    color: #6a1b9a;
+    text-decoration: underline;
+}
+
+.agenda-cultural-descripcion {
+    margin-top: 0.4em;
+    color: #333;
+}
+
+.agenda-cultural-descripcion p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.agenda-cultural-badge {
+    display: inline-block;
+    font-size: 0.7em;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 4px;
+    padding: 0.15em 0.5em;
+    vertical-align: middle;
+    margin-left: 0.4em;
+}
+
+.agenda-cultural-badge-suspendido {
+    background: #ffebee;
+    color: #c62828;
+}
+
+.agenda-cultural-badge-infantil {
+    background: #e3f2fd;
+    color: #1565c0;
+}
+
+.agenda-cultural-destacado {
+    border-color: #f9a825;
+    box-shadow: 0 0 0 1px #f9a825 inset;
+}
+
+.agenda-cultural-suspendido .agenda-cultural-titulo {
+    text-decoration: line-through;
+    color: #999;
+}
+
+.agenda-cultural-vacio {
+    color: #666;
+    font-style: italic;
+}
+
+@media (max-width: 480px) {
+    .agenda-cultural-evento {
+        flex-direction: column;
+    }
+
+    .agenda-cultural-imagen {
+        width: 100%;
+        height: auto;
+        max-height: 200px;
+    }
+}
+
+/* Lightbox de imágenes */
+.agenda-cultural-imagen-enlace {
+    display: block;
+    flex-shrink: 0;
+    cursor: zoom-in;
+}
+
+@media (max-width: 480px) {
+    .agenda-cultural-imagen-enlace {
+        width: 100%;
+    }
+}
+
+.agenda-cultural-lightbox-abierto {
+    overflow: hidden;
+}
+
+.agenda-cultural-lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 999999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2em 1em;
+    background: rgba(0, 0, 0, 0.85);
+    cursor: zoom-out;
+}
+
+.agenda-cultural-lightbox[hidden] {
+    display: none;
+}
+
+.agenda-cultural-lightbox-figura {
+    margin: 0;
+    max-width: 100%;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.agenda-cultural-lightbox-figura img {
+    max-width: 100%;
+    max-height: calc(100vh - 6em);
+    object-fit: contain;
+    border-radius: 4px;
+    cursor: default;
+}
+
+.agenda-cultural-lightbox-figura figcaption {
+    color: #fff;
+    text-align: center;
+    font-size: 0.95em;
+}
+
+.agenda-cultural-lightbox-cerrar {
+    position: absolute;
+    top: 0.5em;
+    right: 0.75em;
+    background: none;
+    border: 0;
+    color: #fff;
+    font-size: 2.5rem;
+    line-height: 1;
+    cursor: pointer;
+}
