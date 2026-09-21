@@ -64,7 +64,7 @@ Si no hay eventos próximos, se muestra el mensaje «No hay eventos culturales p
 
 | Constante | Dónde | Por defecto | Descripción |
 |---|---|---|---|
-| `AGENDA_CULTURAL_CACHE_MINUTOS` | `agenda-cultural.php` | `10` | Minutos de caché de la consulta. `0` desactiva la caché. (Pendiente de subir a 15 en producción.) |
+| `AGENDA_CULTURAL_CACHE_MINUTOS` | `agenda-cultural.php` | `10` | Minutos de caché de la consulta. `0` desactiva la caché. |
 
 ## Estructura
 
