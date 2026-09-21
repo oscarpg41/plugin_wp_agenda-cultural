@@ -22,7 +22,7 @@ Plugin de WordPress que muestra la agenda de eventos culturales. Los datos se ge
 - **Caché de la consulta**: el resultado se guarda en un transient de WordPress (`agenda_cultural_eventos`) para no consultar la BD externa en cada visita. La caché se borra al desactivar el plugin.
 - **Carga selectiva de assets**: el CSS y el JS solo se cargan en las páginas donde aparece el shortcode.
 - **Seguridad**: toda la salida va escapada (`esc_html`, `esc_url`, `esc_attr`), los enlaces externos llevan `rel="noopener"` y los errores de BD se registran en el log sin mostrarse al visitante.
-- **Aviso de configuración**: si faltan las constantes de conexión, muestra un aviso en el escritorio de WordPress y no intenta conectar.
+- **Aviso de configuración**: si faltan las constantes de conexión, la tabla o la URL de imágenes, muestra un aviso en el escritorio de WordPress y no intenta conectar.
 
 ## Requisitos
 
@@ -34,7 +34,7 @@ define('BD_NOMBRE', '...');
 define('BD_USUARIO', '...');
 define('BD_PASSWORD', '...');
 define('AGENDA_CULTURAL_TABLA', '....');
-define('AGENDA_CULTURAL_IMG_URL''.....'); //URL donde se han guardado las imagenes de los eventos culturales
+define('AGENDA_CULTURAL_IMG_URL', 'https://.../files/agenda-cultural/eventos/'); // URL base (con barra final) donde están las imágenes de los eventos
 ```
 
 Esto nos permite que los eventos puedan estar en otra base de datos externa a la instancia de WordPress. Si la información de los eventos estan en la base de datos de la intancia de WordPress, debeis configurar los defines de la siguiente forma:
@@ -64,7 +64,6 @@ Si no hay eventos próximos, se muestra el mensaje «No hay eventos culturales p
 | Constante | Dónde | Por defecto | Descripción |
 |---|---|---|---|
 | `AGENDA_CULTURAL_CACHE_MINUTOS` | `agenda-cultural.php` | `10` | Minutos de caché de la consulta. `0` desactiva la caché. (Pendiente de subir a 15 en producción.) |
-| `AGENDA_CULTURAL_IMG_URL` | `wp-config.php` (antes de cargar el plugin) | `https://gemal.lagranja-valsain.com/files/agenda-cultural/eventos/` | URL base desde la que se sirven las imágenes de los eventos. |
 
 ## Estructura
 
