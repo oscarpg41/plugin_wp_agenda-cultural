@@ -1,6 +1,7 @@
 # Agenda Cultural
 
-Plugin de WordPress que muestra la agenda de eventos culturales. Los datos se gestionan desde el back-office que debes de generar y el plugin los lee directamente de su base de datos.
+Plugin de WordPress que muestra la agenda de eventos culturales. Los datos se gestionan desde el back-office que debes de generar por otro lado y el plugin los lee directamente de su base de datos.
+**IMPORTANTE:** Este plugin no realiza la gestión de los eventos, únicamente muestra la información.
 
 - **Versión:** 1.1.0
 - **Shortcode:** `[agenda_cultural]`
